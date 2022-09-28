@@ -1,0 +1,27 @@
+<resources>
+    <style name="Widget.Theme.NeRecipe.NoActionBar.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="Widget.Theme.Button"
+        parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="iconTint">?attr/colorControlNormal</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">?attr/colorControlNormal</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:textSize">@dimen/button_padding</item>
+        <item name="android:minWidth">@dimen/button_size</item>
+        <item name="android:minHeight">@dimen/button_size</item>
+    </style>
+
+    <style name="Widget.Theme.FavoriteButton"
+        parent="Widget.Theme.Button">
+        <item name="iconTint">@color/favorite_button_tint</item>
+    </style>
+
+</resources>

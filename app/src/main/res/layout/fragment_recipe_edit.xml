@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/design_default_color_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:text="@string/recipeName"
+        android:textColor="@color/purple_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/recipeName"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:hint="@string/recipeNameHint"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView1"
+        android:autofillHints="@string/recipeNameHint"
+        android:importantForAutofill="yes"/>
+
+    <TextView
+        android:textColor="@color/purple_700"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:text="@string/kitchen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recipeName"/>
+    <Spinner
+        android:id="@+id/kitchenSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/kitchenSpinner"
+        android:text="@string/ingredients"/>
+
+    <EditText
+        android:id="@+id/ingredientsTextEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="160dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:hint="@string/ingredientsHint"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:autofillHints="@string/ingredientsHint"
+        android:importantForAutofill="yes" />
+
+    <TextView
+        android:textColor="@color/purple_700"
+        android:id="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsTextEdit"
+        android:text="@string/cookProcess"/>
+
+    <EditText
+        android:id="@+id/cookingTextEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:maxHeight="240dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:hint="@string/cookProcessHint"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:autofillHints="@string/cookProcessHint"
+        android:importantForAutofill="yes"
+        />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:textColor="@color/purple_700"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/addImageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/addImageButton"
+        android:text="@string/picture"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_spacing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Add Recipe Button"
+        app:srcCompat="@drawable/ic_add_24"/>
+
+    <ImageButton
+        android:id="@+id/delImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cookingTextEdit"
+        android:contentDescription="Add Image"
+        app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+    <ImageButton
+        android:id="@+id/addImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:contentDescription="Del Image"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/delImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/cookingTextEdit"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+    <ImageView
+        android:id="@+id/editImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addImageButton"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="Preview image" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

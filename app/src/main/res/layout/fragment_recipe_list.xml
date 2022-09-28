@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/design_default_color_background"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/addRecipeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_add_24"
+        android:contentDescription="Add button" />
+
+    <ImageButton
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@id/addRecipeButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_manage_search_24"
+        android:contentDescription="Filter button" />
+
+    <EditText
+        android:id="@+id/searchRecipeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:hint="@string/recipeName"
+        android:singleLine="true"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@id/applySearchButton"
+        app:layout_constraintStart_toEndOf="@id/filterButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="@string/recipeName" />
+
+    <ImageButton
+        android:id="@+id/applySearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check_24"
+        android:contentDescription="Apply search" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/menuBarrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="addRecipeButton, filterButton, searchRecipeText, applySearchButton"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecipeListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_spacing"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/menuBarrier"
+        app:layout_constraintBottom_toTopOf="@id/bottomTabs"
+        tools:listitem="@layout/recipe_card" />
+
+        <ImageView
+            android:id="@+id/noRecipesImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/menuBarrier"
+            app:layout_constraintBottom_toTopOf="@id/bottomTabs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/norecipe"
+            android:contentDescription="No recipes image" />
+
+        <TextView
+            android:id="@+id/noRecipesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common_spacing"
+            android:textColor="@color/purple_700"
+            app:layout_constraintTop_toBottomOf="@id/noRecipesImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/noRecipeText" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/bottomTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_menu_book_24"
+            android:text="@string/allRecipes" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_star_rate_black_24"
+            android:text="@string/favorite" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

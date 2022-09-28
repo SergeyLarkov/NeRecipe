@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/cardImageView"
+        android:layout_width="@dimen/preview_image_size"
+        android:layout_height="@dimen/preview_image_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/grade"
+        tools:src="@drawable/nophoto"
+        android:contentDescription="Preview image" />
+
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_baseline_more_vert_24"
+        app:layout_constraintTop_toTopOf="@id/recipeName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/kitchenName"
+        android:contentDescription="Menu" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/favoriteButton"
+        style="@style/Widget.Theme.FavoriteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/button_padding"
+        android:checkable="true"
+        android:layout_marginTop="16dp"
+        app:icon="@drawable/lc_favorite_check_24"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/menuButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/grade"/>
+
+    <TextView
+        android:id="@+id/recipeName"
+        android:singleLine="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardImageView"
+        app:layout_constraintEnd_toStartOf="@id/favoriteButton"
+        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        tools:text="Название рецепта"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kitchen"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/recipeName"
+        app:layout_constraintStart_toEndOf="@id/cardImageView" />
+
+    <TextView
+        android:id="@+id/kitchenName"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/recipeName"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintEnd_toStartOf="@id/favoriteButton"
+        android:layout_marginStart="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Кухня"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/kitchenName"
+        app:layout_constraintStart_toEndOf="@id/cardImageView"/>
+
+    <TextView
+        android:id="@+id/authorName"
+        android:layout_width="0dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/kitchenName"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@id/favoriteButton"
+        tools:text="Автор"/>
+
+    <TextView
+        android:id="@+id/textview7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/grade"
+        app:layout_constraintStart_toEndOf="@id/cardImageView"
+        app:layout_constraintTop_toBottomOf="@id/authorName" />
+
+    <TextView
+        android:id="@+id/grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="4.5"
+        app:layout_constraintStart_toEndOf="@id/textview7"
+        app:layout_constraintTop_toBottomOf="@id/authorName" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/comment"
+        app:layout_constraintEnd_toStartOf="@id/commentsCount"
+        app:layout_constraintTop_toBottomOf="@id/authorName" />
+
+    <TextView
+        android:id="@+id/commentsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        tools:text="10"
+        app:layout_constraintEnd_toStartOf="@id/favoriteButton"
+        app:layout_constraintTop_toBottomOf="@id/authorName" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:layout_constraintTop_toBottomOf="@id/favoriteButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

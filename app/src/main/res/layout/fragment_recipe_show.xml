@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/design_default_color_background"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/favoriteButton"
+                style="@style/Widget.Theme.FavoriteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:checkable="true"
+                android:paddingStart="@dimen/button_padding"
+                app:icon="@drawable/lc_favorite_check_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recipeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:layout_marginTop="@dimen/common_spacing"
+                android:layout_marginEnd="@dimen/common_spacing"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@id/favoriteButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Название рецепта" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:layout_marginEnd="@dimen/common_spacing"
+                android:singleLine="true"
+                android:text="@string/kitchen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeName" />
+
+            <TextView
+                android:id="@+id/kitchenName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:layout_marginEnd="@dimen/common_spacing"
+                app:layout_constraintEnd_toStartOf="@id/favoriteButton"
+                app:layout_constraintStart_toEndOf="@id/textView"
+                app:layout_constraintTop_toBottomOf="@id/recipeName"
+                tools:text="Кухня" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:singleLine="true"
+                android:text="@string/author"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kitchenName" />
+
+            <TextView
+                android:id="@+id/authorName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:layout_marginEnd="@dimen/common_spacing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@id/kitchenName"
+                tools:text="Автор" />
+
+            <ImageView
+                android:id="@+id/showImageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:maxHeight="200dp"
+                app:layout_constraintTop_toBottomOf="@id/authorName"
+                tools:layout_editor_absoluteX="0dp"
+                tools:src="@drawable/nophoto"
+                android:contentDescription="Preview image" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:layout_marginTop="@dimen/common_spacing"
+                android:layout_marginEnd="@dimen/common_spacing"
+                android:textColor="@color/purple_700"
+                android:text="@string/ingredients"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/showImageView" />
+
+            <TextView
+                android:id="@+id/recipeIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:layout_marginEnd="@dimen/common_spacing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1"
+                tools:text="Состав" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:layout_marginTop="@dimen/common_spacing"
+                android:text="@string/cookProcess"
+                android:textColor="@color/purple_700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipeIngredients" />
+
+            <TextView
+                android:id="@+id/recipeCooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_spacing"
+                android:layout_marginEnd="@dimen/common_spacing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:text="как готовить" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:textColor="@color/purple_700"
+        android:text="@string/comment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/commentsList" />
+
+    <ListView
+        android:id="@+id/commentsList"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:paddingStart="@dimen/button_padding"
+        android:paddingEnd="4dp"
+        android:paddingBottom="@dimen/common_spacing"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        tools:listitem="Комментарий"/>
+
+<TextView
+    android:id="@+id/textView5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/yourComment"
+    android:layout_marginStart="@dimen/common_spacing"
+    app:layout_constraintBottom_toBottomOf="@+id/commentTextEdit"
+    app:layout_constraintTop_toTopOf="@+id/commentTextEdit"
+    app:layout_constraintStart_toStartOf="parent"
+    />
+
+    <EditText
+        android:id="@+id/commentTextEdit"
+        android:layout_width="0dp"
+        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/commentHint"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/applyCommentButton"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        android:autofillHints="" />
+<ImageButton
+    android:id="@+id/applyCommentButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="@+id/commentTextEdit"
+    app:layout_constraintTop_toTopOf="@+id/commentTextEdit"
+    app:srcCompat="@drawable/ic_check_24"
+    android:contentDescription="Apply button" />
+
+<TextView
+    android:id="@+id/textView8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/setGrade"
+    android:layout_marginStart="@dimen/common_spacing"
+    android:layout_marginBottom="@dimen/common_spacing"
+    app:layout_constraintBottom_toTopOf="@+id/commentTextEdit"
+    app:layout_constraintStart_toStartOf="parent"
+    />
+<SeekBar
+    android:id="@+id/seekBar"
+    style="@style/Widget.AppCompat.SeekBar.Discrete"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:max="5"
+    android:progress="0"
+    app:layout_constraintBottom_toBottomOf="@+id/textView8"
+    app:layout_constraintTop_toTopOf="@+id/textView8"
+    app:layout_constraintStart_toEndOf="@id/textView8"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginStart="@dimen/common_spacing"
+    android:layout_marginEnd="@dimen/common_spacing"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

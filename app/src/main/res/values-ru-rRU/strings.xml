@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Рецепты</string>
+    <string name="recipeBook">КНИГА РЕЦЕПТОВ</string>
+    <string name="meetingText">Представьтесь пожалуйста:</string>
+    <string name="nameHint">ваше имя</string>
+    <string name="goText">СТАРТ</string>
+    <string name="recipeName">Название рецепта:</string>
+    <string name="recipeNameHint">Введите название</string>
+    <string name="ingredientsHint">введите ингридиенты</string>
+    <string name="ingredients">Ингридиенты:</string>
+    <string name="kitchen">Кухня:</string>
+    <string name="cookProcess">Способ приготовления:</string>
+    <string name="cookProcessHint">опишите приготовление блюда</string>
+    <string name="picture">Изображение</string>
+    <string name="author">Автор:</string>
+    <string name="grade">Оценка:</string>
+    <string name="comment">Комментарии:</string>
+    <string name="noRecipeText">В выбранной категории ничего нет</string>
+    <string name="allRecipes">Все рецепты</string>
+    <string name="favorite">Избранное</string>
+    <string name="filterParameters">Параметры фильтра</string>
+    <string name="gradeNoLess">Оценка не ниже</string>
+    <string name="withComments">С комментариями</string>
+    <string name="apply">Применить</string>
+    <string name="yourComment">Ваш комментарий:</string>
+    <string name="commentHint">прокомментируйте рецепт</string>
+    <string name="setGrade">Оцените рецепт:</string>
+    <string name="editMenu">Редактировать</string>
+    <string name="deleteMenu">Удалить</string>
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">NeRecipe</string>
+    <string name="imageContentDescription" translatable="false">Image</string>
+    <string name="recipeBook">RECIPES BOOK</string>
+    <string name="meetingText">What is your name:</string>
+    <string name="nameHint">your name</string>
+    <string name="goText">START</string>
+    <string name="recipeName">Recipe name:</string>
+    <string name="recipeNameHint">Enter recipe name</string>
+    <string name="ingredientsHint">enter ingredients</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="kitchen">Kitchen:</string>
+    <string name="cookProcess">How to cook:</string>
+    <string name="cookProcessHint">write how to cook</string>
+    <string name="picture">Изображение</string>
+    <string name="author">Author:</string>
+    <string name="grade">Grade:</string>
+    <string name="comment">Comments:</string>
+    <string name="noRecipeText">No recipes found</string>
+    <string name="allRecipes">All recipes</string>
+    <string name="favorite">Favorite</string>
+    <string name="filterParameters">Filter parameters</string>
+    <string name="gradeNoLess">Grade no less</string>
+    <string name="withComments">With comments</string>
+    <string name="apply">Apply</string>
+    <string name="yourComment">Your comment:</string>
+    <string name="commentHint">set your comment</string>
+    <string name="setGrade">Set grade:</string>
+    <string name="editMenu">Edit</string>
+    <string name="deleteMenu">Delete</string>
+</resources>
